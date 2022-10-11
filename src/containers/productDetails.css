@@ -44,9 +44,9 @@
     padding:10px;
 }
 .selectQty{
-    
+    margin-top: 10px;
    border-bottom:1px solid rgb(237, 236, 236);
-   
+   padding-bottom:10px;
 }
 .quantityBody{
     margin-top:20px;
@@ -71,12 +71,13 @@
 .deliveryDetails{
     margin-top: 20px;
 }
-.deliveryDetails ul{
+.deliveryDetails{
     padding:10px 10px
 }
 .deliveryDetails ul li{
     list-style: none;
     padding: 20px;
+    
 }
 
 @media only screen and (max-width:600px){

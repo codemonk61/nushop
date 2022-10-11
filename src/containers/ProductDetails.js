@@ -42,9 +42,8 @@ const ProductDetails = () => {
             <h5>Offers(5)</h5>
             {
               selector.map((coupon) => {
-                return <ul>
-                  <li><img src="https://cdn.zeplin.io/619d06ef8cfa6aab579b7e4d/assets/51151f2c-82a0-45dc-9ff5-b31b2717a90e.svg"/>{coupon.coupondesc}</li>
-                </ul>
+                return  <li><img src="https://cdn.zeplin.io/619d06ef8cfa6aab579b7e4d/assets/51151f2c-82a0-45dc-9ff5-b31b2717a90e.svg"/>{coupon.coupondesc}</li>
+                
               })
 
             }

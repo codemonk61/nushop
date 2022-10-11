@@ -1,0 +1,54 @@
+.nameInput{
+    margin-top:15px;
+    margin-bottom: 15px;
+    border: 1px solid lightgrey;
+    padding:10px;
+    border-radius: 10px;
+}
+.nameInput input{
+    border:none;
+    margin-left: 10px;
+    font-size: 20px;
+    outline: none;
+}
+
+textarea{
+    border: 1px solid lightgrey;
+    width: 100%;
+    border-radius: 10px;
+     padding:10px;
+    font-size: 20px;
+    outline: none;
+}
+.pinHouse{
+    display: flex;
+    gap:10px
+}
+
+.saveContinuebtn{
+    margin-top: 50px;
+    width:100%
+}
+
+.saveContinuebtn button{
+    color: white;
+    background-color: rgb(48, 48, 48);
+    width: 100%;
+    padding:10px 20px;
+    border:none;
+    border-radius: 10px;
+
+}
+
+@media only screen and (max-width:600px){
+    .userDetails{
+        padding: 0 10px;
+    }
+    .userDetails{
+        width: 100%;
+    }
+    .pinHouse input{
+        width: 130px;
+    }
+
+  }

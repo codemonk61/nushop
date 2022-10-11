@@ -1,0 +1,53 @@
+.billPageWrapper{
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.thankuBox{
+    width: 500px;
+    background-color: green;
+    border:10px;
+    color:white;
+    border-radius: 10px;
+    padding: 15px;
+}
+.itemPageWrapper{
+    border-radius: 10px;
+    width: 500px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+.billPageBtn{
+    margin-top:20px;
+}
+.billPageBtn button{
+    border: none;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    padding:10px 15px;
+    border-radius: 10px;
+    width:100%;
+}
+@media only screen and (max-width:600px){
+    .billPageWrapper{
+        margin-top: 20px;
+        padding:0 10px
+    }
+   .thankuBox{
+    width:100%;
+    margin-top: 20px;
+    
+   }
+   .billBoxWrapper{
+    width:100%;
+    margin-top: 20px;
+   }
+   .itemPageWrapper{
+    width:100%;
+   }
+  }
+

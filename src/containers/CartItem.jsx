@@ -13,14 +13,15 @@ const CartItem = ({ itemData }) => {
   return (
     <div className='cartItemWrapper'>
       <div className='cartItemImage'>
+      <div className='delete' onClick={() => { dispatch(removeFromCart(itemData.id)) }}>
+          <span><MdClose /></span>
+        </div>
         <img src={itemData.image} alt={itemData.title} />
       </div>
       <div className='cartItemDesc'>
         <p>{itemData.title}</p>
-        <p>{itemData.category}</p>
         <p>${itemData.price}</p>
-      </div>
-      <div className='qtyWrapper'>
+
         <div className='qty'>
           <span>Qty:
              <input
@@ -31,9 +32,14 @@ const CartItem = ({ itemData }) => {
             />
           </span>
         </div>
-        <div className='delete' onClick={() => { dispatch(removeFromCart(itemData.id)) }}>
-          <span><MdClose /></span>
-        </div>
+
+      </div>
+      <div className='productPrice'>
+        <p>${itemData.price}</p>
+      </div>
+      <div className='qtyWrapper'>
+        
+       
       </div>
     </div>
   )

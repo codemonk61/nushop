@@ -3,20 +3,7 @@ a{
   text-decoration: none;
   color: black;
 }
-.header{
-  height:80px;
-  border-bottom: 1px solid lightgrey;
-  line-height: 80px;
-  display: flex;
-  justify-content: space-around;
- 
-}
-.header p{
-  font-size: 30px;
-  margin-left:20px;
-  font-weight: bolder;
-  cursor:pointer
-}
+
 .wrapper{
  background-color: lavenderblush;
   padding:10px;
@@ -92,42 +79,52 @@ overflow: hidden;
   color:white
 }
 .cartWrapper{
-position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top:30px;
-  margin:0% 10%
 }
 .cartWrapper .model{
   cursor: pointer;
 }
-.cartItemImage{
-  width:200px;
-  height:250px;
 
+.cartItemImage{
+  position: relative;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding:10px;
 }
+
 .cartItemImage img{
-  width:100%;
-  height:200px;
+  width:100px;
+  height:100px;
+  
 }
 .cartItemWrapper{
+  width:500px;
+  
   margin: 20px 0px;
-  width: 50%;
-  position: relative;
+
   display:flex;
-  border: 1px solid black;
-  justify-content: center;
+
   align-items: center;
   padding: 10px;
   border-radius: 10px;
   overflow: hidden;
+  gap:15px
+}
+.productPrice:nth-child(3){
+  margin-left: auto;
 }
 .qty input{
   border-radius: 8px;
   width: 50px;
   margin-left: 5px;
+  border:1px ;
 }
 .delete span{
-  background-color: black;
-  color: white;
+
+  color:black;
   position:absolute;
   top:0;
   right:0;
@@ -152,13 +149,9 @@ border-radius: 10px;
   cursor:pointer;
 }
 .cartSummary{
-  position: absolute;
-  right:10%;
-  top: 0;
+margin-top: 20px;
 }
-.cartSummary div{
- margin-bottom: 10px;
-}
+
 .model{
   position:relative;
 }
@@ -188,60 +181,6 @@ border-radius: 10px;
   padding:10px;
   border-radius: 10px;
 }
-.cartProducts{
-  position: relative;
-  
-  width:800px;
-  margin: auto;
-}
-.cartProducts .productImage{
-  padding:15px;
-  border: 1px solid black;
-  width:300px;
-  margin: 20px 20px;
-  border-radius: 10px;
-}
-.productImage img{
-  width: 100%;
-  height:250px;
-}
-.cartProducts .userDetails{
-  position: absolute;
-  top:10%;
-  right: 10%;
-}
-.userDetails input{
-  height:30px;
-  width:300px;
-  border-radius: 10px;
-  margin:10px 0px;
-  padding-left: 10px;
-}
-.userDetails textarea{
-  width:300px;
-  border-radius: 10px;
-  margin:10px 0px;
-  padding-left: 10px;
-}
-.userDetails button{
-  border:none;
-  background-color: black;
-  padding:8px 15px;
-  color:white;
-  border-radius:10px;
-}
-.previewPage {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  
-  
-}
-.preview{
-  border: 1px solid black;
-  padding:10px;
-  border-radius: 10px;
-}
 
 @media only screen and (max-width:600px){
   .productDetails{
@@ -250,5 +189,8 @@ border-radius: 10px;
   }
   .box{
     margin-top: 20px;
+  }
+  .cartItemWrapper{
+    width:100%;
   }
 }

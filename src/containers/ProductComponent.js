@@ -23,7 +23,7 @@ const ProductComponent = ({ currentRecords }) => {
               </div>
               <div className="desc">
                 <p>{item.title.substring(0, 30)}...</p>
-                <p style={{background:"green",color:"white",height:"30px",width:"30px",textAlign:"center",lineHeight:"30px",borderRadius:"5px"}}>{item.rating.rate}</p>
+                <div style={{display:"flex",alignItems:"center"}}><p style={{ background: "green", height: "30px", width: "30px", textAlign: "center", lineHeight: "30px", borderRadius: "5px",color:"white" }}>{item.rating.rate}</p><p style={{fontSize:"13px",marginLeft:"15px"}}>Based on {item.rating.count} Reviews</p></div>
                 <p>$ {item.price}<span style={{textDecoration:"line-through",marginLeft:"10px",color:"light-grey"}}>  ${(item.price+(10/100)*(item.price)).toFixed(2)}</span></p>
               </div>
               </Link>

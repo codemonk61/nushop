@@ -1,9 +1,10 @@
-
+import "./checkout.css"
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { setUserDetails } from '../redux/shopping/shopping-actions'
-
+import { BsWhatsapp } from 'react-icons/bs';
+import Bagitems from "./Bagitems"
 const Checkout = () => {
     const [userDetails,setDetails]=useState({
         name:"",
@@ -17,53 +18,26 @@ const Checkout = () => {
     }
     
   return (
-    <div className='cartProducts'>
-        {
-            selector.map((item)=>{
-                    return <div className='cartProduct' key={item.id}>
-                    <div className='productImage'>
-                        <img src={item.image} alt={item.title}/>
-                        {/* <h5>${item.price}</h5> */}
-                        <p>{item.title}</p>
-                    </div>
-                    </div>
-            })
-        }
-        <div className='userDetails'>
-            <center><h3>Enter Your Details</h3></center>
-            <div>
-            <label>Name :</label>
+    <div className="checkoutWrapper">
+        <Bagitems/>
+          <div className='userDetails'>
+            <div style={{marginBottom:"30px"}}>
+                <h3>Enter Mobile Number</h3>
             </div>
-            <div>
-            <input type="text" placeholder='Enter Name' required
-            onChange={(e)=>{setDetails({...userDetails,name:e.target.value})}}
-            />
+            <div className="numberInput">
+                <span className="whatsappLogo"><BsWhatsapp style={{background:"green",color:"white",borderRadius:"50%",fontSize:"30px"}}/></span><input type="text" placeholder="Enter whatsapp no."/>
             </div>
-            <div>
-            <label>Number :</label>
+            <div className="getoffersonwhatsapp">
+                <p>Get offers on Whatsapp</p>
             </div>
-            <div>
-            <input type="number" placeholder='Enter Number' required
-            onChange={(e)=>{setDetails({...userDetails,number:e.target.value})}}
-            />
-            </div>
-            <div>
-            <label>Address :</label>
-            </div>
-            <div>
-            <textarea type="text" placeholder='Enter Address' required
-            onChange={(e)=>{setDetails({...userDetails,address:e.target.value})}}
-            />
-            </div>
-            <div>
-                <Link to="/preview">
-                    <button onClick={handleUserDetails}>Next</button>
+            <div className="checkoutbtn">
+                <Link to="/basicdetails">
+                    <button>Confirm number</button>
                 </Link>
- 
             </div>
-
         </div>
-    </div>
+        </div>
+    
   )
 }
 

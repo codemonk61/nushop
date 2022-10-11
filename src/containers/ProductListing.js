@@ -9,7 +9,7 @@ import { setProducts } from "../redux/shopping/shopping-actions";
 const ProductPage = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
   // No of Records to be displayed on each page   
-  const [recordsPerPage] = useState(4);
+  const [recordsPerPage] = useState(3);
   // To hold the actual data
   const dispatch = useDispatch();
   const fetchProducts = async () => {

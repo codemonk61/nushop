@@ -5,7 +5,7 @@ import CartItem from './CartItem'
 import { MdClose } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { setDiscount } from '../redux/shopping/shopping-actions';
-
+import "./cart.css"
 
 const Cart = ({ cart }) => {
     const [toggle, setToggle] = useState(false)
@@ -66,29 +66,59 @@ const Cart = ({ cart }) => {
                     }
                 </div>
             </Modal>
-
+            <div>
+            <div>
             {
+                
                 cart.map((item) => {
 
                     return <CartItem key={item.id} itemData={item} />
 
                 })
+                
             }
+            </div>
+            </div>
             <div className='cartSummary'>
-                <h4>Cart Summary</h4>
+                {/* <h4>Cart Summary</h4>
                 <div className='cartPrice'>
                     <span>Total:({totalItem})  </span>
                     <span className='price'>${applyOffer ? (totalPrice - applyOffer).toFixed(2) : totalPrice}</span>
                     <span style={{ color: "green", marginLeft: "10px" }}>{toggle ? `You Saved ${applyOffer.toFixed(2)}$` : ""}</span>
                 </div>
-                <div className='checkoutBtn'>
-                   <Link to={`/checkout`}>
-                        <button>Checkout to proceed</button>
-                    </Link>
-                
-                    
-                    <span onClick={() => { setOpenModel(true) }}>{toggle ? "Change Offer" : "Apply coupons"}</span>
+                 */}
+                    <div className="offer">
+                    <div className="offerLogo">
+                        <img style={{color:"green"}} src="https://cdn.zeplin.io/619d06ef8cfa6aab579b7e4d/assets/51151f2c-82a0-45dc-9ff5-b31b2717a90e.svg" alt="tag-image"/>
+                    </div>
+                    <div className="offerDesc">
+                        <p style={{ color: "green", marginLeft: "10px",fontSize:"12px",textAlign:"left" }}>{toggle ? `You Saved ${applyOffer.toFixed(2)}$` : ""}</p>
+                        <p style={{color:"green",fontSize:"12px"}}>4 offer available</p>
+                    </div>
+                    <div className="offerBtn">
+                        <p style={{color:"green",fontSize:"12px",marginLeft:"10px"}} onClick={() => { setOpenModel(true) }}>{toggle ? "Change Offer" : "Apply coupons"}</p>
+                    </div>
                 </div>
+
+                  <div className='checkoutSubtotal'>
+                    <div className='subtotal_price'>
+
+                    <div className='subtotal'>
+                        <p>Subtotal({totalItem})</p>
+                        <p>Saving $160</p>
+                    </div>
+                    <div className='subtotalprice'>
+                        <p className='price'>${applyOffer ? (totalPrice - applyOffer).toFixed(2) : totalPrice}</p>
+                    </div>
+
+                    </div>
+                    <div className='subtotalcheckoutbtn'>
+                    <Link to={`/checkout`}>
+                        <button>checkout</button>
+                    </Link>
+                    </div>
+                </div> 
+            
             </div>
             
         </div>
