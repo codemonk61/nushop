@@ -51,9 +51,9 @@ const Checkout = () => {
                 {
                     charCheck && <p style={{ color: "red" }}>Please enter numbers</p>
                 }
-                <div className="getoffersonwhatsapp">
+                {/* <div className="getoffersonwhatsapp">
                     <p>Get offers on Whatsapp</p>
-                </div>
+                </div> */}
                 <div className="checkoutbtn">
                     <Link to="/basicdetails">
                         <button disabled={toggle}>Confirm number</button>

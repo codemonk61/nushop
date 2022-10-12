@@ -29,15 +29,15 @@ const Payment = () => {
                          <input type="radio" name="pay"/><span>Pay Online</span>
                     </div>
                     <div className="discount"> 
-                        <p>20$ discount</p>
+                        <p>$20 discount</p>
                     </div>
                 </div>
-                <div className="paymentBox">
+                <div className="paymentBox" >
                     <div className="radio">
                          <input type="radio" name="pay"/><span>Pay COD</span>
                     </div>
-                    <div className="discount"> 
-                        <p>10$ charge</p>
+                    <div className="discount" style={{background:"rgb(252, 118, 118)"}}> 
+                        <p>$10 charge</p>
                     </div>
                 </div>
                 <div className="offer">
@@ -46,7 +46,7 @@ const Payment = () => {
                     </div>
                     <div className="offerDesc">
                         <p>Save upto $1000</p>
-                        <p style={{color:"green"}}>7 offer available</p>
+                        <p style={{color:"green"}}>4 offer available</p>
                     </div>
                     <div className="offerBtn">
                         <p>Offers</p>
@@ -62,18 +62,18 @@ const Payment = () => {
                             <p>Items</p>
                             <p>Items total</p>
                             <p>Online Payment Discount</p>
-                            <p>Deliviery Free</p>
+                            <p>Deliviery Fee</p>
                             <hr></hr>
                             <p>Total Amount</p>
                         </div>
 
                         <div className="billItem">
                             <p>2</p>
-                            <p>6200</p>
-                            <p>-20</p>
-                            <p>0</p>
+                            <p>$6200</p>
+                            <p>-20$</p>
+                            <p>$0</p>
                             <hr></hr>
-                            <p>6180</p>
+                            <p>$6180</p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ const Payment = () => {
                 <div className="paymentFooter">
                     <div className="totalAmount">
                         <p>Total amount</p>
-                        <p>$ 6180 <span style={{marginLeft:"10px",textDecoration:"line-through",fontSize:"12px"}}>$6200</span></p>
+                        <p>$6180 <span style={{marginLeft:"10px",textDecoration:"line-through",fontSize:"12px"}}>$6200</span></p>
                     </div>
                     <Link to="/billpage">
                     <div className="placeOrderbtn">

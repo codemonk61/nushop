@@ -109,12 +109,12 @@ const BasicDetails = () => {
                         <div className="label">
                             <label>House Number</label>
                         </div>
-                        <div className="nameInput">
+                        <div className="nameInput" >
                             <input type="text" placeholder="House Number" 
                             name="houseNumber" onChange={handleChange} value={formData.houseNumber}
                             />
                         </div>
-                        <div className='text-danger'>{formErrors.houseNumber}</div>
+                        {/* <div className='text-danger'>{formErrors.houseNumber}</div> */}
                     </div>
                 </div>
 
@@ -130,7 +130,7 @@ const BasicDetails = () => {
 
                 <div className="saveContinuebtn">
                     <Link to="/payment">
-                    <button onClick={handleSubmit}>Save & Continue</button>
+                    <button>Save & Continue</button>
                     </Link>
                 </div>
 

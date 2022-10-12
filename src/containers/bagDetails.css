@@ -21,8 +21,10 @@ textarea{
     outline: none;
 }
 .pinHouse{
+
     display: flex;
-    gap:10px
+    gap:10px;
+
 }
 
 .saveContinuebtn{
@@ -40,6 +42,10 @@ textarea{
 
 }
 
+.pinHouse input{
+    width: 100%;
+}
+
 @media only screen and (max-width:600px){
     .userDetails{
         padding: 0 10px;
@@ -48,7 +54,11 @@ textarea{
         width: 100%;
     }
     .pinHouse input{
-        width: 130px;
+        width: 100%;
+    }
+
+    .userDetails{
+        width:100%;
     }
 
   }

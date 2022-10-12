@@ -1,0 +1,9 @@
+.pagination{
+
+}
+@media only screen and (max-width:600px){
+    .pagination{
+        width:100%;
+        display: none;
+    }
+}

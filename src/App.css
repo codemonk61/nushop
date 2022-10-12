@@ -150,6 +150,7 @@ border-radius: 10px;
 }
 .cartSummary{
 margin-top: 20px;
+width:500px;
 }
 
 .model{
@@ -194,3 +195,6 @@ margin-top: 20px;
     width:100%;
   }
 }
+/* *{
+  background-color: rgb(252, 118, 118);
+} */
