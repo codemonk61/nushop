@@ -29,7 +29,9 @@ const ProductComponent = ({ currentRecords }) => {
               </Link>
               <div className="boxFooter">
                 <div className="whatsAppbtn">
+                  <a href="https://wa.me/918637824594?text=urlencodedtext">
                 <BsWhatsapp style={{background:"green",color:"white",borderRadius:"50%"}}/>
+                </a>
                 </div>
                 
                 <div >
